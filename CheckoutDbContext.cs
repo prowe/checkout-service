@@ -11,5 +11,12 @@ namespace checkout_service
         public CheckoutDbContext(DbContextOptions<CheckoutDbContext> options) : base(options)
         {
         }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.Entity<LineItem>()
+                .Property("ShoppingCartId")
+                .IsRequired();
+        }
     }
 }
