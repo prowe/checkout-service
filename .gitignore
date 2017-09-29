@@ -1,4 +1,5 @@
-bing
-obj
-.vscodebin/**
+obj/**
+.vscode/
+bin
 data.db
+
