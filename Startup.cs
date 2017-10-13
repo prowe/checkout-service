@@ -14,6 +14,9 @@ namespace checkout_service
 
         public void Configure(IApplicationBuilder app)
         {
+            app.UseCors(builder => builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod());
             app.UseMvc();
         }
     }
